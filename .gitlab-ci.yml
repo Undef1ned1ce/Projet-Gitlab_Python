@@ -1,0 +1,12 @@
+stages:
+   - code_test:
+   - code_release:
+   - code_deploy:
+
+# test du code
+code_test:
+  stage: code_test
+   - bash
+  script:
+   python -m unittest discover
+   - echo " Test du code effectué" 
