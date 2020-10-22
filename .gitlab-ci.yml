@@ -1,7 +1,7 @@
 stages:
-   - code_test:
-   - code_release:
-   - code_deploy:
+   - code_test
+   - code_release
+   - code_deploy
 
 # test du code
 code_test:
