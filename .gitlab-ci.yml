@@ -6,7 +6,8 @@ stages:
 # test du code
 code_test:
   stage: code_test
-   - bash
+  tags:
+   - gitlab
   script:
    python -m unittest discover
    - echo " Test du code effectué" 
