@@ -35,3 +35,5 @@ code_deploy:
     - aws lamda update-function-code --function-name gitlab-examen-group-d3 --s3-bucket gitlab-examen-group-d3 --s3-key lambda_function.zip
     - git checkout dev
     - git rebase master
+
+# finalisation
