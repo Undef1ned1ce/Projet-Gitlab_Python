@@ -11,7 +11,7 @@ code_test:
   tags:
    - gitlab
   script:
-   python -m unittest discover
+   - python -m unittest discover
    - echo "Test du code effectué"
 
 #Archive
@@ -32,5 +32,5 @@ code_deploy:
     aws s3 cp lambda_function.zip s3://gitlab-examen-group_id=3/
     aws lamda update-function-code --function-name gitlab-examen-group_id=3 --s3-bucket gitlab-examen-group_id=3 --s3-key lambda_function.zip
    
-    #only:
+    # only:
     #  - master
