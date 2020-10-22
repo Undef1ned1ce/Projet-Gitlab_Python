@@ -20,7 +20,7 @@ code_release:
    tags:
       - gitlab
    script:
-    zip lambda_function.zip index.py
+    - zip lambda_function.zip index.py
     - echo "Archive"
 
 #Deployer
@@ -29,8 +29,8 @@ code_deploy:
    tags:
       - gitlab
    script:
-    aws s3 cp lambda_function.zip s3://gitlab-examen-group_id=3/
-    aws lamda update-function-code --function-name gitlab-examen-group_id=3 --s3-bucket gitlab-examen-group_id=3 --s3-key lambda_function.zip
+    - aws s3 cp lambda_function.zip s3://gitlab-examen-group_id=3/
+    - aws lamda update-function-code --function-name gitlab-examen-group_id=3 --s3-bucket gitlab-examen-group_id=3 --s3-key lambda_function.zip
    
     # only:
     #  - master
