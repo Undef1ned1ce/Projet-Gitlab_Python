@@ -20,7 +20,6 @@ code_release:
    tags:
       - gitlab
    script:
-    - sudo apt-get install zip unzip
     - zip lambda_function.zip index.py
     - echo "Archive"
 
