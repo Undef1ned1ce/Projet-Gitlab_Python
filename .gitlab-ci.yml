@@ -10,4 +10,4 @@ code_test:
    - gitlab
   script:
    python -m unittest discover
-   - echo " Test du code effectué" 
+   - echo "Test du code effectué"
