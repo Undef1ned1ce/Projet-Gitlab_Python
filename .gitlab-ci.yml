@@ -31,8 +31,8 @@ code_deploy:
    script:
     - export AWS_ACCESS_KEY_ID=AKIA2G2XJY5PWFSNRXVS
     - export AWS_SECRET_ACCESS_KEY=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
-    - aws s3 cp lambda_function.zip s3://gitlab-examen-group-d3/
-    - aws lamda update-function-code --function-name gitlab-examen-group-d3 --s3-bucket gitlab-examen-group-d3 --s3-key lambda_function.zip
+    - aws s3 cp lambda_function.zip s3://gitlab-examen-d3/
+    - aws lamda update-function-code --function-name gitlab-examen-d3 --s3-bucket gitlab-examen-d3 --s3-key lambda_function.zip
     - git checkout dev
     - git rebase master
 
