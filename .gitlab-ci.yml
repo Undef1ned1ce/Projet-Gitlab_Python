@@ -1,4 +1,4 @@
-#image: python:latest
+image: python:latest
 
 stages:
    - code_test
@@ -33,7 +33,7 @@ code_deploy:
     - export AWS_SECRET_ACCESS_KEY=ygq6vXTYUEHv/onoWHAULDAA0gSqVTu6jQMKOp3S
     - aws s3 cp lambda_function.zip s3://gitlab-examen-d3/
     - aws lambda update-function-code --function-name gitlab-examen-d3 --s3-bucket gitlab-examen-d3 --s3-key lambda_function.zip
-    - git checkout dev
-    - git rebase master
+#    - git checkout dev
+#    - git rebase master
 
 
